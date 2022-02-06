@@ -1,0 +1,19 @@
+{
+  "name": "bolt",
+  "version": "1.0.0",
+  "description": "Make your websites faster! ⚡️",
+  "source": "./lib/index.js",
+  "main": "./build/bolt.js",
+  "umd:main": "./build/bolt.min.js",
+  "module": "./build/bolt.module.js",
+  "unpkg": "./build/bolt.min.js",
+  "scripts": {
+    "build": "microbundle --external none",
+    "dev": "microbundle watch --external none & python -m SimpleHTTPServer"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "microbundle": "^0.14.2"
+  }
+}

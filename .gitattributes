@@ -1,0 +1,8 @@
+build/bolt.js filter=lfs diff=lfs merge=lfs -text
+build/bolt.min.js filter=lfs diff=lfs merge=lfs -text
+build/bolt.modern.js filter=lfs diff=lfs merge=lfs -text
+build/bolt.module.js filter=lfs diff=lfs merge=lfs -text
+build/bolt.module.js.map filter=lfs diff=lfs merge=lfs -text
+build/bolt.js.map filter=lfs diff=lfs merge=lfs -text
+build/bolt.min.js.map filter=lfs diff=lfs merge=lfs -text
+build/bolt.modern.js.map filter=lfs diff=lfs merge=lfs -text

@@ -15,7 +15,7 @@ TBD Steps to install
 - `npm run dev`
 - http://localhost:8000/examples
 
-### 🔨Router Wrapper
+### 🔨 Router Wrapper
 In order for Bolt to know where updates need to be rendered you need to specify a dom element to use. This is done by adding `data-router` to any top level DOM element that will be changing from page to page. Typically this would be your main content.
 
 Anything outside of `data-router` will be left intact between page renders.

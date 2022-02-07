@@ -1,6 +1,8 @@
 # Codename: ⚡️🤖 Bolt
 A light weight way to make your html faster ⚡️
 
+Demo: https://hungry-hoover-153767.netlify.app/examples/
+
 ## 🧐 What it does and WHY yet another router?
 The primary goal of Bolt is to be an un-opinionated helper that speeds up page load times and gives users the feel of an SPA while remaining static HTML. It's not quite a router and not quite a transition library, it's main objective is speed and it's up to you to decide how to implement.
 

@@ -22,6 +22,7 @@ const handlePreRender = () => {
 
 const handleRenderComplete = () => {
     console.log("Render Complete")
+    window.scrollTo(0, 0);
     transition.classList.add('out');
     wrapper = document.querySelector('#wrapper');
     transition.addEventListener('transitionend', cleanup);

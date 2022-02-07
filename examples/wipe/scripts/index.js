@@ -1,3 +1,5 @@
+window.BoltRouter = new BoltRouter();
+
 let wrapper = document.querySelector('#wrapper');
 let transition = document.querySelector('#transition-wipe');
 let inTransit = false;

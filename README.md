@@ -6,7 +6,7 @@ The primary goal of Bolt is to be an un-opinionated helper that speeds up page l
 
 You can use Bolt in a few different ways, out of the box it will improve load times with a few modifications to your code.
 
-Heavily inspired by Quicklinks, Turbo & Highway the goal of Bolt is to be an easy to integrate script that gives speed + flexibility to build around.
+Heavily inspired by [Quicklink](https://github.com/GoogleChromeLabs/quicklink), [Turbo](https://turbo.hotwired.dev/) & [Highway](https://highway.js.org/) the goal of Bolt is to be an easy to integrate script that gives speed + flexibility to build around.
 
 ## 📦 Setup
 TBD Steps to install
@@ -44,9 +44,3 @@ Bolt has a very simple API that allows you the ability to control lifecycle step
 
 ## Examples
 - Basic Examples
-
-### Inspired by
-- Turbo
-- Highway
-- Quicklinks
-- Instant

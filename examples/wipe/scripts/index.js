@@ -1,6 +1,6 @@
 let wrapper = document.querySelector('#wrapper');
 let transition = document.querySelector('#transition-wipe');
-let loaded = false;
+let inTransit = false;
 
 const handleBeforeNaviate = () => {
     console.log("Before Navigate")
@@ -24,14 +24,13 @@ const handlePreRender = () => {
 const handleRenderComplete = () => {
     console.log("Render Complete")
     window.scrollTo(0, 0);
-    transition.classList.add('out');
-    wrapper = document.querySelector('#wrapper');
-    transition.addEventListener('transitionend', cleanup);
 }
 
 const handleLoaded = () => {
-    loaded = true;
     console.log("Load Complete")
+    transition.classList.add('out');
+    wrapper = document.querySelector('#wrapper');
+    transition.addEventListener('transitionend', cleanup);
 }
 
 const cleanup = () => {
@@ -41,11 +40,10 @@ const cleanup = () => {
     transition.removeEventListener('transitionend', cleanup);
 }
 
-
 document.addEventListener("DOMContentLoaded", (event) => {
     wrapper.classList.add('active');
-    BoltRouter.on('common:before-navigate', handleBeforeNaviate);
-    BoltRouter.on('common:before-render', handlePreRender);
-    BoltRouter.on('common:render-complete', handleRenderComplete);
-    BoltRouter.on('common:load-complete', handleLoaded);
+    BoltRouter.on('before-navigate', handleBeforeNaviate);
+    BoltRouter.on('before-render', handlePreRender);
+    BoltRouter.on('render-complete', handleRenderComplete);
+    BoltRouter.on('load-complete', handleLoaded);
 });

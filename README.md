@@ -2,7 +2,7 @@
 A light weight way to make your html faster ⚡️
 
 ## 🧐 What it does and WHY yet another router?
-The primary goal of Bolt is to be an unopinionated helper that speeds up page loads times and gives users the feel of an SPA while remaining static HTML. It's not quite a router and not quite a transition library, it's main objective is speed and it's up to you to decide how to implement.
+The primary goal of Bolt is to be an un-opinionated helper that speeds up page loads times and gives users the feel of an SPA while remaining static HTML. It's not quite a router and not quite a transition library, it's main objective is speed and it's up to you to decide how to implement.
 
 You can use Bolt in a few different ways, out of the box it will improve load times with a few modifications to your code.
 

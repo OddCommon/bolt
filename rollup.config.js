@@ -20,13 +20,12 @@ export default {
 			file: 'build/bolt.module.js',
 			format: 'cjs', 
 			sourcemap: true,
-			compact: true,
 			exports: 'default'
 		}
 	],
 	plugins: [
-		resolve(), // tells Rollup how to find date-fns in node_modules
-		commonjs(), // converts date-fns to ES modules
-		production && terser() // minify, but only in production
+		resolve(),
+		commonjs(),
+		production && terser()
 	]
 };

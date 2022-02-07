@@ -76,13 +76,19 @@ header nav ul li a {
 .hero {
     position: relative;
     width: 100vw;
-    height: 70vh;
+    height: 20vh;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
     overflow: hidden;
+    transition: height 666ms cubic-bezier(0.666, 0, 0.237, 1);
+}
+
+#wrapper.active .hero {
+    height: 70vh;
+    transition: 0s;
 }
 
 .hero h1 {

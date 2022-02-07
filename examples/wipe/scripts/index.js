@@ -5,6 +5,7 @@ let loaded = false;
 const handleBeforeNaviate = () => {
     console.log("Before Navigate")
     transition.classList.add('in');
+    wrapper.classList.remove('active');
     transition.addEventListener('transitionend', inTransitionComplete);
 }
 
@@ -31,12 +32,12 @@ const handleRenderComplete = () => {
 const handleLoaded = () => {
     loaded = true;
     console.log("Load Complete")
-    wrapper.classList.add('active');
 }
 
 const cleanup = () => {
     transition.classList.remove('out');
     transition.classList.remove('in');
+    wrapper.classList.add('active');
     transition.removeEventListener('transitionend', cleanup);
 }
 

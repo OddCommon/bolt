@@ -57,7 +57,11 @@ header #logo {
   height: 25px;
   width: 25px;
   background: white;
-  transition: all 666ms;
+  transition: background 666ms, width 333ms cubic-bezier(0.666, 0, 0.237, 1);
+}
+
+header #logo.wide {
+  width: 75px;
 }
 
 header nav {

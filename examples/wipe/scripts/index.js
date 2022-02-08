@@ -11,6 +11,10 @@ const handleBeforeNaviate = event => {
   transition.addEventListener('transitionend', inTransitionComplete);
 };
 
+const handleNavigateComplete = event => {
+  console.log(`Bolt: Navigate Complete - to: ${event.to} from: ${event.from}`);
+};
+
 const inTransitionComplete = () => {
   console.log('In Transition Complete');
   BoltRouter.resume();
@@ -50,6 +54,7 @@ const cleanup = () => {
 document.addEventListener('DOMContentLoaded', event => {
   wrapper.classList.add('active');
   BoltRouter.on('before-navigate', handleBeforeNaviate);
+  BoltRouter.on('navigate-complete', handleNavigateComplete);
   BoltRouter.on('before-render', handlePreRender);
   BoltRouter.on('render-complete', handleRenderComplete);
   BoltRouter.on('load-complete', handleLoaded);

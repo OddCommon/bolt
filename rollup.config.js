@@ -19,7 +19,7 @@ export default {
     {
       name: 'BoltRouter',
       file: 'build/bolt.module.js',
-      format: 'cjs',
+      format: 'es',
       sourcemap: true,
       exports: 'default',
     },

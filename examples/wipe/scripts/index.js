@@ -2,9 +2,9 @@ window.BoltRouter = new BoltRouter();
 
 let wrapper = document.querySelector('#wrapper');
 let transition = document.querySelector('#transition-wipe');
-let inTransit = false;
 
 const handleBeforeNaviate = event => {
+  BoltRouter.resume();
   console.log(`Bolt: Before Navigate: to: ${event.to} from: ${event.from}`);
   transition.classList.add('in');
   wrapper.classList.remove('active');

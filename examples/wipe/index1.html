@@ -28,19 +28,18 @@
   <body>
     <header data-router-merge="header">
       <a id="logo" href="./index.html" data-router-link data-router-merge="logo"></a>
-      <nav data-router="nav">
+      <nav>
         <ul>
           <li><a href="./index.html" data-router-link>Home</a></li>
           <li><a href="./index1.html" data-router-link>Page 1</a></li>
           <li><a href="./index2.html" data-router-link>Page 2</a></li>
           <li><a href="../basic/index.html">Basic Example</a></li>
-          <li><a href="../wipe/index.html">Wipe Example</a></li>
           <li><a href="../default/index.html">Broswer Default</a></li>
         </ul>
       </nav>
     </header>
     <div id="transition-wipe"></div>
-    <main data-router="main">
+    <main data-router="main" class="alt-layout active" data-router-merge="main">
       <div id="wrapper">
         <section class="hero">
           <h1>Page 1</h1>

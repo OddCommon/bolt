@@ -9,13 +9,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#wrapper {
+
+main {
   opacity: 0;
   transition: all 666ms;
 }
 
-#wrapper.active {
+main.active {
   opacity: 1;
+}
+
+#injection-test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 55px;
+  text-align: center;
+  width: 250px;
+  z-index: 1;
 }
 
 #transition-wipe {
@@ -91,7 +104,7 @@ header nav ul li a {
   transition: height 999ms cubic-bezier(0.666, 0, 0.237, 1);
 }
 
-#wrapper.active .hero {
+main.active #wrapper .hero {
   height: 70vh;
   transition: 0s;
 }
@@ -114,7 +127,7 @@ header nav ul li a {
   z-index: 0;
 }
 
-#wrapper.active .hero-image {
+.active #wrapper .hero-image {
   transform: scale(1);
 }
 
@@ -148,4 +161,27 @@ p {
 
 .next:hover {
   background: rgba(0, 0, 0, 0.1);
+}
+
+.alt-layout #wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alt-layout .hero {
+  position: fixed;
+  width: 50vw;
+  height: 100vh;
+  left: 0px;
+}
+
+.active.alt-layout #wrapper .hero {
+  width: 50vw;
+  height: 100vh;
+}
+
+.alt-layout .page-content {
+  width: 50vw;
+  margin: 0px;
+  padding-top: 10rem;
 }

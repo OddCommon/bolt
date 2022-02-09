@@ -25,7 +25,13 @@ TBD Steps to install
 
 In order for Bolt to know where updates need to be rendered you need to specify a dom element to use. This is done by adding `data-router` to any top level DOM element that will be changing from page to page. Typically this would be your main content.
 
-Anything outside of `data-router` will be left intact between page renders.
+Anything outside of `data-router` will be left intact between page renders. You can have multiple wrappers by specifying an ID
+
+example:
+
+```html
+<div data-router="some-id">...</div>
+```
 
 ### Router Link
 
@@ -53,6 +59,12 @@ Bolt has a predefined lifecycle and emits events throughout this lifecycle. you 
 ### Merge Elements
 
 Bolt has a concept of merging static elements that are outside the main `data-router` wrapper. By adding `data-router-merge` to an element bolt will merge attributes of those elements. This is handy if you have different classes or require a specific layout between pages on elements that are static.
+
+example:
+
+```html
+<div data-router-merge="div-id">...</div>
+```
 
 ### API
 

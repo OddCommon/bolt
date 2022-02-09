@@ -1,6 +1,6 @@
 window.BoltRouter = new BoltRouter();
 
-let wrapper = document.querySelector('#wrapper');
+let wrapper = document.querySelector('main');
 let transition = document.querySelector('#transition-wipe');
 
 const handleBeforeNaviate = event => {
@@ -37,7 +37,7 @@ const handleLoaded = () => {
   BoltRouter.lock();
 
   transition.classList.add('out');
-  wrapper = document.querySelector('#wrapper');
+  wrapper = document.querySelector('main');
   transition.addEventListener('transitionend', cleanup);
 };
 

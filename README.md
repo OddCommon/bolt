@@ -66,6 +66,12 @@ example:
 <div data-bolt-merge="div-id">...</div>
 ```
 
+### Prefetch
+
+If you want to really go after speed and have specific assets that you want to preload before a navigation event even happens you can use `data-bolt-prefetch`. This will add `preload` tags and the browser will begin preloading those assets in the background.
+
+🚨 - This is very agressive and must be used with caution, but it can result in dramatically faster pages loads.
+
 ### API
 
 Bolt has a very simple API that allows you the ability to control lifecycle steps.

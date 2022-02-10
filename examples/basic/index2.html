@@ -1,45 +1,90 @@
 <html>
-    <head>
-        <title>Page 2</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles/style.css" />
-    </head>
-    <body>
-        <header>
-            <a id="logo" href="./index.html" data-router-link></a>
-            <nav>
-                <ul>
-                    <li><a href="./index.html" data-router-link>Home</a></li>
-                    <li><a href="./index1.html" data-router-link>Page 1</a></li>
-                    <li><a href="./index2.html" data-router-link>Page 2</a></li>
-                    <li><a href="../wipe/index.html">Wipe Example</a></li>
-                    <li><a href="../default/index.html">Broswer Default</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div id="transition-wipe"></div>
-        <main data-router>
-            <div id="wrapper">
-
-            <section class="hero">
-                <h1>Page 2</h1>
-                <div class="hero-image" style="background-image: url(./images/splash3.jpg)"></div>
-            </section>
-            <section class="page-content">
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet ipsum nec quam consectetur semper sit amet dignissim massa. Vestibulum pretium ligula enim, quis ornare turpis feugiat et. Curabitur mauris tellus, vehicula nec odio vitae, convallis accumsan velit. Sed viverra tellus non magna fermentum, eu consequat mauris pulvinar. Etiam facilisis arcu quis massa posuere, sed fringilla odio suscipit. Fusce maximus vitae ex sed ornare. Sed lorem metus, commodo quis nulla vel, semper dictum libero. Nulla metus diam, malesuada et lorem vitae, consequat dictum nulla. Duis et urna consectetur, rhoncus mauris vel, mattis diam. Morbi sollicitudin, nulla id mattis efficitur, ante arcu volutpat sapien, ut pellentesque tortor velit id velit. Ut varius id dolor ac rhoncus. Cras nec vehicula magna, nec sodales leo. Ut rhoncus nulla lectus, sed molestie massa iaculis at. Maecenas purus turpis, consequat quis lacus id, ornare dignissim nisl.</p>
-                <p>Phasellus tortor nisi, malesuada ultricies nisl nec, maximus aliquet justo. Donec tincidunt tortor non tincidunt fermentum. Vestibulum nec iaculis est. Ut facilisis ante a nisi ultricies, a consequat purus tempor. Ut eu nisl id nibh blandit sollicitudin quis ut orci. Proin ac orci at mi volutpat pharetra ut ut erat. Nulla sagittis quam et iaculis imperdiet. Quisque rhoncus at enim vel placerat. Maecenas elementum justo ut mauris pellentesque tempus. Aliquam ultrices lectus sed nunc vulputate euismod. Maecenas varius magna et ligula finibus, vel feugiat lectus hendrerit. Suspendisse at sapien hendrerit, finibus diam sed, ullamcorper lorem. Suspendisse potenti. Integer condimentum nec tortor nec suscipit. Morbi et lorem magna. In vel mollis massa.</p>
-                <p>Vivamus quam mi, vehicula ac porta eu, rhoncus sed libero. Donec dapibus odio at elit convallis, quis finibus metus consectetur. In risus lectus, eleifend at fermentum eu, sollicitudin ac turpis. Vestibulum elit nulla, fermentum in mauris ac, imperdiet cursus libero. Vivamus eget magna rutrum, fermentum diam quis, luctus odio. Duis suscipit sem et ornare consectetur. Quisque condimentum metus et diam varius, ac bibendum tellus dignissim.</p>
-                <p>Pellentesque fermentum massa in mattis efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu vestibulum lacus, in ornare mi. Ut cursus aliquam arcu, ornare scelerisque erat placerat at. Integer in ligula ipsum. Cras sit amet molestie nibh, sit amet fermentum sapien. Curabitur mollis tortor vel metus elementum laoreet. Proin congue non odio in aliquet. Nulla facilisi. Donec non nisi sit amet ex pellentesque suscipit blandit et sem. Integer efficitur risus arcu, ac interdum elit consequat quis. Suspendisse sit amet turpis auctor, vestibulum quam id, dignissim risus. Pellentesque at cursus dui. Suspendisse mattis odio felis, in volutpat ipsum vestibulum at. Mauris condimentum vestibulum neque, quis sollicitudin libero rutrum sit amet.</p>
-                <p>Quisque quis ipsum feugiat, maximus libero lobortis, hendrerit ex. Maecenas nulla tellus, ultrices non viverra sed, posuere nec erat. Sed consequat tempus eleifend. Vestibulum volutpat elit ac pharetra mollis. Aliquam semper ante ac accumsan sollicitudin. Nullam vitae diam eu nibh sodales aliquet vitae a velit. Aenean pulvinar mauris nisl, et ultrices mauris viverra quis. Nulla eu condimentum felis. Nam sit amet ullamcorper sem, ac venenatis mauris. Aenean aliquam elit ut nibh pretium finibus. Sed semper convallis porttitor.</p>
-                <a class="next" href="./" data-router-link>Next Page</a>
-            </section>
-            </div>
-        </main>
-        <script type="text/javascript" src="../../build/bolt.js"></script>
-        <script type="text/javascript" src="./scripts/index.js"></script>
-        
-    </body>
+  <head>
+    <title>Page 2</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <a id="logo" href="./index.html" data-bolt-link></a>
+      <nav>
+        <ul>
+          <li><a href="./index.html" data-bolt-link>Home</a></li>
+          <li><a href="./index1.html" data-bolt-link>Page 1</a></li>
+          <li><a href="./index2.html" data-bolt-link>Page 2</a></li>
+          <li><a href="../wipe/index.html">Wipe Example</a></li>
+          <li><a href="../default/index.html">Broswer Default</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="transition-wipe"></div>
+    <main data-bolt>
+      <div id="wrapper">
+        <section class="hero">
+          <h1>Page 2</h1>
+          <div class="hero-image" style="background-image: url(./images/splash3.jpg)"></div>
+        </section>
+        <section class="page-content">
+          <h2>Lorem Ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet ipsum nec quam
+            consectetur semper sit amet dignissim massa. Vestibulum pretium ligula enim, quis ornare
+            turpis feugiat et. Curabitur mauris tellus, vehicula nec odio vitae, convallis accumsan
+            velit. Sed viverra tellus non magna fermentum, eu consequat mauris pulvinar. Etiam
+            facilisis arcu quis massa posuere, sed fringilla odio suscipit. Fusce maximus vitae ex
+            sed ornare. Sed lorem metus, commodo quis nulla vel, semper dictum libero. Nulla metus
+            diam, malesuada et lorem vitae, consequat dictum nulla. Duis et urna consectetur,
+            rhoncus mauris vel, mattis diam. Morbi sollicitudin, nulla id mattis efficitur, ante
+            arcu volutpat sapien, ut pellentesque tortor velit id velit. Ut varius id dolor ac
+            rhoncus. Cras nec vehicula magna, nec sodales leo. Ut rhoncus nulla lectus, sed molestie
+            massa iaculis at. Maecenas purus turpis, consequat quis lacus id, ornare dignissim nisl.
+          </p>
+          <p>
+            Phasellus tortor nisi, malesuada ultricies nisl nec, maximus aliquet justo. Donec
+            tincidunt tortor non tincidunt fermentum. Vestibulum nec iaculis est. Ut facilisis ante
+            a nisi ultricies, a consequat purus tempor. Ut eu nisl id nibh blandit sollicitudin quis
+            ut orci. Proin ac orci at mi volutpat pharetra ut ut erat. Nulla sagittis quam et
+            iaculis imperdiet. Quisque rhoncus at enim vel placerat. Maecenas elementum justo ut
+            mauris pellentesque tempus. Aliquam ultrices lectus sed nunc vulputate euismod. Maecenas
+            varius magna et ligula finibus, vel feugiat lectus hendrerit. Suspendisse at sapien
+            hendrerit, finibus diam sed, ullamcorper lorem. Suspendisse potenti. Integer condimentum
+            nec tortor nec suscipit. Morbi et lorem magna. In vel mollis massa.
+          </p>
+          <p>
+            Vivamus quam mi, vehicula ac porta eu, rhoncus sed libero. Donec dapibus odio at elit
+            convallis, quis finibus metus consectetur. In risus lectus, eleifend at fermentum eu,
+            sollicitudin ac turpis. Vestibulum elit nulla, fermentum in mauris ac, imperdiet cursus
+            libero. Vivamus eget magna rutrum, fermentum diam quis, luctus odio. Duis suscipit sem
+            et ornare consectetur. Quisque condimentum metus et diam varius, ac bibendum tellus
+            dignissim.
+          </p>
+          <p>
+            Pellentesque fermentum massa in mattis efficitur. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Ut eu vestibulum lacus, in ornare mi. Ut cursus aliquam
+            arcu, ornare scelerisque erat placerat at. Integer in ligula ipsum. Cras sit amet
+            molestie nibh, sit amet fermentum sapien. Curabitur mollis tortor vel metus elementum
+            laoreet. Proin congue non odio in aliquet. Nulla facilisi. Donec non nisi sit amet ex
+            pellentesque suscipit blandit et sem. Integer efficitur risus arcu, ac interdum elit
+            consequat quis. Suspendisse sit amet turpis auctor, vestibulum quam id, dignissim risus.
+            Pellentesque at cursus dui. Suspendisse mattis odio felis, in volutpat ipsum vestibulum
+            at. Mauris condimentum vestibulum neque, quis sollicitudin libero rutrum sit amet.
+          </p>
+          <p>
+            Quisque quis ipsum feugiat, maximus libero lobortis, hendrerit ex. Maecenas nulla
+            tellus, ultrices non viverra sed, posuere nec erat. Sed consequat tempus eleifend.
+            Vestibulum volutpat elit ac pharetra mollis. Aliquam semper ante ac accumsan
+            sollicitudin. Nullam vitae diam eu nibh sodales aliquet vitae a velit. Aenean pulvinar
+            mauris nisl, et ultrices mauris viverra quis. Nulla eu condimentum felis. Nam sit amet
+            ullamcorper sem, ac venenatis mauris. Aenean aliquam elit ut nibh pretium finibus. Sed
+            semper convallis porttitor.
+          </p>
+          <a class="next" href="./" data-bolt-link>Next Page</a>
+        </section>
+      </div>
+    </main>
+    <script type="text/javascript" src="../../build/bolt.js"></script>
+    <script type="text/javascript" src="./scripts/index.js"></script>
+  </body>
 </html>

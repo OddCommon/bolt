@@ -141,6 +141,10 @@ main.active #wrapper .hero {
   margin-top: -50px;
 }
 
+.page-content img {
+  width: 100%;
+}
+
 p {
   line-height: 1.3rem;
   margin-bottom: 2rem;

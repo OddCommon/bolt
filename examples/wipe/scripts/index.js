@@ -1,4 +1,4 @@
-window.BoltRouter = new BoltRouter();
+// window.BoltRouter = new BoltRouter();
 
 let wrapper = document.querySelector('main');
 let transition = document.querySelector('#transition-wipe');
@@ -53,9 +53,9 @@ const cleanup = () => {
 
 document.addEventListener('DOMContentLoaded', event => {
   wrapper.classList.add('active');
-  BoltRouter.on('before-navigate', handleBeforeNaviate);
+  BoltRouter.on('navigate-before', handleBeforeNaviate);
   BoltRouter.on('navigate-complete', handleNavigateComplete);
-  BoltRouter.on('before-render', handlePreRender);
+  BoltRouter.on('render-before', handlePreRender);
   BoltRouter.on('render-complete', handleRenderComplete);
   BoltRouter.on('load-complete', handleLoaded);
 });

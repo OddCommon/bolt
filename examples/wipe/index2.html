@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <script type="text/javascript" src="../../build/bolt.js"></script>
     <script>
       console.log("I'm and inline script! for page 2");
     </script>
@@ -30,24 +29,28 @@
     </script>
   </head>
   <body>
-    <header data-router-merge="header">
-      <a id="logo" href="./index.html" data-router-link data-router-merge="logo"></a>
+    <header data-bolt-merge="header">
+      <a id="logo" href="./index.html" data-bolt-link data-bolt-merge="logo"></a>
       <nav>
         <ul>
-          <li><a href="./index.html" data-router-link>Home</a></li>
-          <li><a href="./index1.html" data-router-link>Page 1</a></li>
-          <li><a href="./index2.html" data-router-link>Page 2</a></li>
+          <li><a href="./index.html" data-bolt-link>Home</a></li>
+          <li><a href="./index1.html" data-bolt-link>Page 1</a></li>
+          <li><a href="./index2.html" data-bolt-link>Page 2</a></li>
           <li><a href="../basic/index.html">Basic Example</a></li>
           <li><a href="../default/index.html">Broswer Default</a></li>
         </ul>
       </nav>
     </header>
     <div id="transition-wipe"></div>
-    <main data-router="main" class="active" data-router-merge="main">
+    <main data-bolt="main" class="active" data-bolt-merge="main">
       <div id="wrapper">
         <section class="hero">
           <h1>Page 2</h1>
-          <div class="hero-image" style="background-image: url(./images/splash3.jpg)"></div>
+          <div
+            class="hero-image"
+            style="background-image: url(./images/splash3.jpg)"
+            data-bolt-prefetch
+          ></div>
         </section>
         <section class="page-content">
           <h2>Lorem Ipsum</h2>
@@ -103,11 +106,12 @@
             ullamcorper sem, ac venenatis mauris. Aenean aliquam elit ut nibh pretium finibus. Sed
             semper convallis porttitor.
           </p>
-          <a class="next" href="./" data-router-link>Next Page</a>
+          <a class="next" href="./" data-bolt-link>Next Page</a>
         </section>
       </div>
     </main>
 
+    <script type="text/javascript" src="../../build/bolt.js"></script>
     <script type="text/javascript" src="./scripts/index.js"></script>
     <script type="text/javascript" src="./scripts/page2.js"></script>
   </body>

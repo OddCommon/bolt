@@ -23,19 +23,19 @@ TBD Steps to install
 
 ### 🔨 Router Wrapper
 
-In order for Bolt to know where updates need to be rendered you need to specify a dom element to use. This is done by adding `data-router` to any top level DOM element that will be changing from page to page. Typically this would be your main content.
+In order for Bolt to know where updates need to be rendered you need to specify a dom element to use. This is done by adding `data-bolt` to any top level DOM element that will be changing from page to page. Typically this would be your main content.
 
-Anything outside of `data-router` will be left intact between page renders. You can have multiple wrappers by specifying an ID
+Anything outside of `data-bolt` will be left intact between page renders. You can have multiple wrappers by specifying an ID
 
 example:
 
 ```html
-<div data-router="some-id">...</div>
+<div data-bolt="some-id">...</div>
 ```
 
 ### Router Link
 
-To get Bolt running on your links just add `data-router-link` as an attribute to any links. Bolt will handle the rest.
+To get Bolt running on your links just add `data-bolt-link` as an attribute to any links. Bolt will handle the rest.
 
 ## ✨ Super charge Bolt
 
@@ -43,27 +43,27 @@ Bolt has a predefined lifecycle and emits events throughout this lifecycle. you 
 
 #### 🎟 Events
 
-- before-prefetch
+- prefetch-before
 - prefetch-complete
-- before-navigate
+- navigate-before
   - params: `{to: string, from: string}`
 - navigate-complete
   - params: `{to: string, from: string}`
 - loading
-- before-render
-- render-complete
 - load-event
   - params: `{total: integer, complete: integer}`
 - load-complete
+- render-before
+- render-complete
 
 ### Merge Elements
 
-Bolt has a concept of merging static elements that are outside the main `data-router` wrapper. By adding `data-router-merge` to an element bolt will merge attributes of those elements. This is handy if you have different classes or require a specific layout between pages on elements that are static.
+Bolt has a concept of merging static elements that are outside the main `data-bolt` wrapper. By adding `data-bolt-merge` to an element bolt will merge attributes of those elements. This is handy if you have different classes or require a specific layout between pages on elements that are static.
 
 example:
 
 ```html
-<div data-router-merge="div-id">...</div>
+<div data-bolt-merge="div-id">...</div>
 ```
 
 ### API
@@ -80,5 +80,3 @@ Bolt has a very simple API that allows you the ability to control lifecycle step
 - `BoltRouter.unlock()` - Unlock the override
 
 ## Examples
-
-- Basic Examples

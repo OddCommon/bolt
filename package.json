@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Make your websites faster! ⚡️",
   "source": "./lib/index.js",
-  "main": "./build/bolt.js",
+  "main": "./lib/index.js",
   "umd:main": "./build/bolt.min.js",
   "module": "./build/bolt.module.js",
   "unpkg": "./build/bolt.min.js",
@@ -13,6 +13,7 @@
     "dev": "npm-run-all --parallel start watch",
     "start": "serve ."
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "devDependencies": {

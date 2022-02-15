@@ -1,1 +1,2 @@
-window.BoltRouter = new BoltRouter();
+// import Router from '../../../build/bolt.module.js';
+// window.BoltRouter = new Router();

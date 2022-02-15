@@ -37,6 +37,8 @@ example:
 
 To get Bolt running on your links just add `data-bolt-link` as an attribute to any links. Bolt will handle the rest.
 
+You can optionally set `data-bolt-link="static"` and bolt will retain the current scroll position on the page between renders. This is helpful if you're paginating content and don't want to reset the user on every click. The default behavior is to scroll the user to the top of the page on every render.
+
 ## ✨ Super charge Bolt
 
 Bolt has a predefined lifecycle and emits events throughout this lifecycle. you can tap into any of them at any time.

@@ -1,20 +1,20 @@
 import Router from '../../../build/bolt.module.js';
-window.BoltRouter = new Router();
+window.Bolt = new Router();
 
 let wrapper = document.querySelector('main');
 let transition = document.querySelector('#transition-wipe');
 
 const handleNavigatePopBefore = e => {
-  // BoltRouter.pause();
+  // Bolt.pause();
   transition.classList.add('in');
   wrapper.classList.remove('active');
   transition.addEventListener('transitionend', inTransitionComplete);
 
-  BoltRouter.off('navigate-before', handleBeforeNaviate);
+  Bolt.off('navigate-before', handleBeforeNaviate);
 };
 
 const handleBeforeNaviate = event => {
-  BoltRouter.resume();
+  Bolt.resume();
   console.log(`Bolt: Before Navigate: to: ${event.to} from: ${event.from}`);
   transition.classList.add('in');
   wrapper.classList.remove('active');
@@ -27,24 +27,24 @@ const handleNavigateComplete = event => {
 
 const inTransitionComplete = () => {
   console.log('In Transition Complete');
-  BoltRouter.resume();
+  Bolt.resume();
   transition.classList.add('out');
   transition.removeEventListener('transitionend', inTransitionComplete);
 };
 
 const handlePreRender = () => {
   console.log('Bolt: Pre Render');
-  BoltRouter.pause();
+  Bolt.pause();
 };
 
 const handleRenderComplete = () => {
   console.log('Bolt: Render Complete');
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 };
 
 const handleLoaded = () => {
   console.log('Bolt: Load Complete');
-  BoltRouter.lock();
+  Bolt.lock();
 
   transition.classList.add('out');
   wrapper = document.querySelector('main');
@@ -53,23 +53,23 @@ const handleLoaded = () => {
 
 const cleanup = () => {
   console.log('Out Transition Complete');
-  BoltRouter.unlock();
+  Bolt.unlock();
 
   transition.classList.remove('out');
   transition.classList.remove('in');
   wrapper.classList.add('active');
   transition.removeEventListener('transitionend', cleanup);
 
-  BoltRouter.off('navigate-before', handleBeforeNaviate);
-  BoltRouter.on('navigate-before', handleBeforeNaviate);
+  Bolt.off('navigate-before', handleBeforeNaviate);
+  Bolt.on('navigate-before', handleBeforeNaviate);
 };
 
 document.addEventListener('DOMContentLoaded', event => {
   wrapper.classList.add('active');
-  BoltRouter.on('navigate-pop-before', handleNavigatePopBefore);
-  BoltRouter.on('navigate-before', handleBeforeNaviate);
-  BoltRouter.on('navigate-complete', handleNavigateComplete);
-  BoltRouter.on('render-before', handlePreRender);
-  BoltRouter.on('render-complete', handleRenderComplete);
-  BoltRouter.on('load-complete', handleLoaded);
+  Bolt.on('navigate-pop-before', handleNavigatePopBefore);
+  Bolt.on('navigate-before', handleBeforeNaviate);
+  Bolt.on('navigate-complete', handleNavigateComplete);
+  Bolt.on('render-before', handlePreRender);
+  Bolt.on('render-complete', handleRenderComplete);
+  Bolt.on('load-complete', handleLoaded);
 });

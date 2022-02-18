@@ -4,8 +4,6 @@ A light weight library ( 3k gzipped ) that gives you the speed and control of an
 
 Demo: https://bolt.oddcommon.dev
 
-## 🧐 What it does and WHY yet another router?
-
 The primary goal of Bolt is to speed up page load times and give users the feel of an SPA while remaining static HTML. It's not quite a router and not quite a transition library, it's main objective is speed and progressive enhancement, it's up to you to decide how to implement.
 
 You can use Bolt in a few different ways, out of the box it will improve load times with a few modifications to your code.

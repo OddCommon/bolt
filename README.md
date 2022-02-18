@@ -1,12 +1,12 @@
-# Codename: ⚡️🤖 Bolt
+# ⚡️🤖 Bolt
 
-A light weight way to make your html faster ⚡️
+A light weight library ( 3k gzipped ) that gives you the speed and control of an SPA while keeping your site static through progressive enhancement and modern techniques.
 
-Demo: https://hungry-hoover-153767.netlify.app/examples/
+Demo: https://bolt.oddcommon.dev
 
 ## 🧐 What it does and WHY yet another router?
 
-The primary goal of Bolt is to be an un-opinionated helper that speeds up page load times and gives users the feel of an SPA while remaining static HTML. It's not quite a router and not quite a transition library, it's main objective is speed and progressive enhancement, it's up to you to decide how to implement.
+The primary goal of Bolt is to speed up page load times and give users the feel of an SPA while remaining static HTML. It's not quite a router and not quite a transition library, it's main objective is speed and progressive enhancement, it's up to you to decide how to implement.
 
 You can use Bolt in a few different ways, out of the box it will improve load times with a few modifications to your code.
 
@@ -14,7 +14,26 @@ Heavily inspired by [Quicklink](https://github.com/GoogleChromeLabs/quicklink), 
 
 ## 📦 Setup
 
-TBD Steps to install
+Bolt is a long lived script and needs to run on each page and between renders. If you initialize Bolt from a script that script will be considered protected, that means it will never be disposed of.
+
+ex: App.js
+
+```js
+import Router from "@oddcommon/bolt";
+
+class App {
+  constructor(){
+    this.BoltRouter = new Router();
+
+    this.observe();
+  }
+
+  observe(){
+    this.BoltRouter.on('navigate-before', () => { .... })
+  }
+}
+new App();
+```
 
 ## Dev
 
@@ -81,6 +100,7 @@ Bolt has a very simple API that allows you the ability to control lifecycle step
 - `BoltRouter.pause()` - Pauses execution before the next step in lifecycle
 - `BoltRouter.resume()` - Resumes execution
 - `BoltRouter.initialize()` - Refreshes bindings
+- `BoltRouter.disable()` - Disable Bolt
 
 ### 🚨 Danger Zone Be Very careful with these
 

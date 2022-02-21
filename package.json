@@ -18,7 +18,7 @@
     "node": ">=12"
   },
   "type": "module",
-  "author": "Drew Dahlman",
+  "author": "OddCommon",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",

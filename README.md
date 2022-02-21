@@ -183,3 +183,7 @@ BoltRouter = new Router({
   ],
 });
 ```
+
+## Examples
+
+You can see a demo of Bolt in `example`. Just run `npm run dev` from the root of the Bolt project and the demo will start up.

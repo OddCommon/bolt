@@ -18,10 +18,10 @@ export default {
   input: 'lib/index.js',
   output: [
     {
-      name: 'BoltRouter',
+      name: 'Bolt',
       file: 'build/index.js',
       format: 'es',
-      sourcemap: false,
+      sourcemap: true,
       exports: 'default',
     },
   ],

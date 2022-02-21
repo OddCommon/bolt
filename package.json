@@ -3,7 +3,6 @@
   "version": "0.0.3",
   "description": "Make your websites faster! ⚡️",
   "source": "lib/index.js",
-  "main": "lib/index.js",
   "module": "build/index.js",
   "scripts": {
     "build": "rollup -c",

@@ -1,0 +1,40 @@
+$max_width: 1920px;
+$min_width: 320px;
+
+$min_font: 35px;
+$max_font: 55px;
+$min_p_font: 18px;
+$max_p_font: 24px;
+
+h1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3em;
+  line-height: 100%;
+  letter-spacing: 0.57em;
+
+  color: #ffffff;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 110%;
+  font-size: clamp(1.5rem, 10vw, 3rem);
+}
+
+h3 {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 110%;
+  font-size: clamp(1rem, 10vw, 1.5rem);
+}
+
+p {
+  margin: 0 0 2rem 0;
+  font-size: clamp(0.5rem, 10vw, 1rem);
+}
+
+a {
+  color: currentColor;
+}

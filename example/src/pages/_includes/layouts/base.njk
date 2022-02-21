@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+
+        <meta name="theme-color" content="#000000" />
+        <meta name="twitter:title" content="Bolt" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@oddcommon_nyc" />
+        <meta name="twitter:image" content="https://bolt.oddcommon.dev/images/social.jpg" />
+        <meta property="og:title" content="Bolt" />
+        <meta property="og:image" content="https://bolt.oddcommon.dev/images/social.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="og:description" content="A light weight library ( 3k gzipped ) that gives you the speed and control of an SPA while keeping your site static through progressive enhancement and modern techniques." />
+        <meta name="description" content="A light weight library ( 3k gzipped ) that gives you the speed and control of an SPA while keeping your site static through progressive enhancement and modern techniques." />
+
+        <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+        <link rel="manifest" href="/icons/site.webmanifest">
+        <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
+
+        {% scss '/styles/index.scss' %}
+
+        {% asyncEach style in styles %}
+            {% scss style.path %}
+        {% endeach %}
+
+        {% js '/scripts/lib/index.js' %}
+
+        {% js '/scripts/index.js' %}
+        {% asyncEach script in scripts %}
+            {% if script.type === "js" %}
+                {% js script.path %}
+            {% endif %}
+        {% endeach %}
+    </head>
+
+    <body>
+        {% include 'partials/header.njk' %}
+        
+        <div data-bolt-static="transition">
+            <div id="white-wipe"></div>
+            <div id="black-wipe"></div>
+        </div>
+
+        <main id="main-wrapper">
+        {{ content | safe }}
+        </main>
+        
+        {% include 'partials/footer.njk' %}
+    </body>
+</html>

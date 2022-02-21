@@ -1,0 +1,112 @@
+header {
+  position: fixed;
+  left: 5vw;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  mix-blend-mode: difference;
+  color: white;
+
+  svg {
+    fill: white;
+  }
+
+  #header_content {
+    position: relative;
+    // width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+
+    #active-link {
+      position: absolute;
+      height: 1px;
+      width: 0px;
+      top: 80px;
+      background: white;
+      transition: left $speed-metal $evil-ease, width $speed $evil-ease, opacity $speed $evil-ease;
+    }
+
+    nav {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      svg {
+        height: 35px;
+        fill: white;
+      }
+
+      a {
+        margin: 0 0.6em;
+        color: white;
+        text-decoration: none;
+
+        &:not(#logo) {
+          display: none;
+        }
+
+        @include screen(sm) {
+          &:not(#logo) {
+            position: relative;
+            display: inline;
+          }
+        }
+
+        &:first-of-type {
+          padding: 0px 1.2rem 0px 0px;
+        }
+      }
+    }
+
+    #render_time {
+      opacity: 0.5;
+    }
+  }
+}
+
+#switch {
+  position: fixed;
+  height: 25px;
+  width: 50px;
+  right: 5vw;
+  top: 3.5rem;
+  background: white;
+  border-radius: 50px;
+  border: 1px solid rgba(black, 0.5);
+
+  margin-top: 0.1em;
+  cursor: pointer;
+  z-index: 10;
+
+  #switch_inner {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20px;
+    width: 20px;
+    top: 50%;
+
+    border-radius: 100%;
+    background: black;
+
+    transform: translate(2px, -50%);
+    transition: transform $speed $evil-ease, background $speed $evil-ease;
+
+    svg {
+      fill: white;
+      height: 70%;
+    }
+  }
+
+  &.active {
+    #switch_inner {
+      background: $magenta;
+      transform: translate(26px, -50%);
+    }
+  }
+}

@@ -10,8 +10,9 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "dev": "npm-run-all --parallel start watch",
-    "start": "serve ."
+    "dev": "npx symlink-dir ./lib ./example/src/scripts/lib && npm-run-all --parallel start watch",
+    "start": "cd example && npm install && npm start",
+    "dist": "npx symlink-dir ./lib ./example/src/scripts/lib && cd example && npm run dist"
   },
   "type": "module",
   "author": "",
@@ -26,7 +27,8 @@
     "rollup": "^2.36.2",
     "rollup-plugin-gzip": "^3.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "symlink-dir": "^5.0.1"
   },
   "husky": {
     "hooks": {

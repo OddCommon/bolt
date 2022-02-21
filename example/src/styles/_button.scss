@@ -1,0 +1,39 @@
+.button {
+  text-align: center;
+  padding: 0.5rem 2em;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0px 0px 5px rgba(black, 0.2);
+  filter: drop-shadow(0px 0px 0px #cac7ec) drop-shadow(0px 0px 0px #fc2874);
+  transition: all $speed;
+  border: 2px solid rgba(white, 0);
+
+  &:hover {
+    background: black;
+    color: white;
+    filter: drop-shadow(0px 0px 5px #cac7ec) drop-shadow(0px 0px 5px #fc2874);
+    border: 2px solid rgba(white, 1);
+  }
+
+  &.inverted {
+    background: black;
+    color: white;
+
+    &:hover {
+      background: white;
+      color: black;
+      filter: drop-shadow(0px 0px 5px #cac7ec) drop-shadow(0px 0px 5px #fc2874);
+      border: 2px solid rgba(white, 1);
+    }
+  }
+
+  &.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}

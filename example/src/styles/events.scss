@@ -1,0 +1,45 @@
+@import 'utils';
+
+#events {
+  display: flex;
+  justify-content: center;
+
+  .events-content {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    opacity: 0;
+    transition: all $speed-metal;
+
+    &.active {
+      opacity: 1;
+    }
+
+    @include screen(md) {
+      flex-direction: row;
+    }
+  }
+  .events-callout {
+    width: 100%;
+
+    @include screen(md) {
+      width: 40%;
+    }
+  }
+  .events-callout-2 {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+  }
+  .events-flow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include screen(md) {
+      width: 60%;
+    }
+  }
+}

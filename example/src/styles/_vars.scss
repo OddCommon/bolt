@@ -1,0 +1,32 @@
+// Colors
+$magenta: #fc2874;
+
+// Breakpoints
+$breakpoint-sm: 500px;
+$breakpoint-md: 900px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1440px;
+$breakpoint-max: 1920px;
+
+$breakpoints: (
+  sm: 500px,
+  md: 900px,
+  lg: 1200px,
+  xl: 1440px,
+  max: 1920px,
+);
+
+// Typography
+$sans-stack: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+  Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+// Timing
+$speed: 333ms;
+$speed-metal: 666ms;
+$transition-delay: 333ms;
+
+// Easing
+$ease-in: cubic-bezier(0.55, 0.055, 0.666, 0.19);
+$ease-out: cubic-bezier(0.237, 0.666, 0.333, 1);
+$evil-ease: cubic-bezier(0.666, 0, 0.237, 1);
+$elegant-ease: cubic-bezier(0.18, 0.58, 0.19, 1);

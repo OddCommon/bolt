@@ -152,6 +152,21 @@ class App {
 new App();
 ```
 
+You can also use regex to apply transitions to groups of pages.
+
+```js
+BoltRouter = new Router({
+  transitions: [
+    {
+      name: 'exampleTransition',
+      from: /features/,
+      to: /link-example/,
+      transition: exampleTransition,
+    },
+  ],
+});
+```
+
 #### Register Transitions
 
 You can register new transitions at any time by calling `BoltRouter.registerTransition({ ...transition-object })`;

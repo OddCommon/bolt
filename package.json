@@ -12,7 +12,7 @@
     "watch": "rollup -c -w",
     "dev": "npx symlink-dir ./lib ./example/src/scripts/lib && npm-run-all --parallel start watch",
     "start": "cd example && npm install && npm start",
-    "dist": "npx symlink-dir ./lib ./example/src/scripts/lib && cd example && npm run dist"
+    "dist": "npx symlink-dir ./lib ./example/src/scripts/lib && cd example && npm install && npm run dist"
   },
   "type": "module",
   "author": "",

@@ -1,6 +1,6 @@
 {
-  "name": "bolt",
-  "version": "1.0.0",
+  "name": "@oddcommon/bolt",
+  "version": "0.0.1",
   "description": "Make your websites faster! ⚡️",
   "source": "./lib/index.js",
   "main": "./lib/index.js",
@@ -14,9 +14,12 @@
     "start": "cd example && npm install && npm start",
     "dist": "npx symlink-dir ./lib ./example/src/scripts/lib && cd example && npm install && npm run dist"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "type": "module",
-  "author": "",
-  "license": "ISC",
+  "author": "Drew Dahlman",
+  "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.1.0",

@@ -12,6 +12,8 @@ Heavily inspired by [Quicklink](https://github.com/GoogleChromeLabs/quicklink), 
 
 ## 📦 Setup
 
+Run `npm i @oddcommon/bolt`
+
 Bolt is a long lived script and needs to run on each page and between renders. If you initialize Bolt from a script that script will be considered protected, that means it will never be disposed of.
 
 ex: App.js

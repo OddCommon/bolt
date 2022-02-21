@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "description": "Make your websites faster! ⚡️",
   "source": "./lib/index.js",
-  "main": "./lib/index.js",
+  "main": "./lib/build/bolt.module.js",
   "umd:main": "./build/bolt.min.js",
   "module": "./build/bolt.module.js",
   "unpkg": "./build/bolt.min.js",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "dev": "npx symlink-dir ./lib ./example/src/scripts/lib && npm-run-all --parallel start watch",
+    "dev": "npx symlink-dir ./build ./example/src/scripts/lib && npm-run-all --parallel start watch",
     "start": "cd example && npm install && npm start",
     "dist": "npx symlink-dir ./lib ./example/src/scripts/lib && cd example && npm install && npm run dist"
   },

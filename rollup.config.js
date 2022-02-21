@@ -19,13 +19,7 @@ export default {
   output: [
     {
       name: 'BoltRouter',
-      file: 'build/bolt.js',
-      format: 'iife',
-      sourcemap: false,
-    },
-    {
-      name: 'BoltRouter',
-      file: 'build/bolt.module.js',
+      file: 'build/index.js',
       format: 'es',
       sourcemap: false,
       exports: 'default',

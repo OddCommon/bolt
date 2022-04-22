@@ -1,6 +1,6 @@
 {
   "name": "@oddcommon/bolt",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Make your websites faster! ⚡️",
   "source": "lib/index.js",
   "module": "build/index.js",

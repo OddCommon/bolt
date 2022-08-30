@@ -45,7 +45,7 @@
     "pretty-quick": "^3.1.1",
     "require-from-string": "^2.0.2",
     "sass": "^1.49.0",
-    "vite": "^2.7.13"
+    "vite": "^2.9.13"
   },
   "husky": {
     "hooks": {
